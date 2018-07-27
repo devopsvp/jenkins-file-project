@@ -39,18 +39,20 @@ pipeline {
                 echo 'Packageing'
             }
         }
-         stage('Nexus') {
-            steps {
-                git 'https://github.com/vijaymargam/jenkins-file-project.git'
-                sh 'mvn deploy'
-                echo 'Nexus'
-            }
-        }
+        // stage('Nexus') {
+          //  steps {
+            //    git 'https://github.com/vijaymargam/jenkins-file-project.git'
+              //  sh 'mvn deploy'
+                //echo 'Nexus'
+           // }
+        //}
         stage('Deploying') {
             steps {
                 git 'https://github.com/vijaymargam/jenkins-file-project.git'
                 sh 'mvn clean package'
-                sh 'mvn tomcat7:deploy'
+                sh 'docker rm -f tomcat'
+                sh 'docker build -t tomcat .'
+                sh 'docker run --name tomcat -p 8080:8080 -dt tomcat'
                 echo 'Deploying'
             }
         }
