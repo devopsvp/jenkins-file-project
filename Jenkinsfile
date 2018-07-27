@@ -28,9 +28,7 @@ pipeline {
         stage('Sonarqube') {
             steps {
                 git 'https://github.com/vijaymargam/jenkins-file-project.git'
-                withSonarQubeEnv('sonar1') {
-      sh 'mvn clean  sonar:sonar'
-    } // SonarQube taskId is automatically attached to the pipeline context
+                sh 'mvn clean test  sonar:sonar'
                 echo 'Testing'
             }
         }
