@@ -20,8 +20,7 @@ pipeline {
             steps {
                 git 'https://github.com/vijaymargam/jenkins-file-project.git'
                 sh 'mvn test'
-                junit '**/target/surefire-reports/*.xml'
-                
+                                
                 echo 'Testing'
             }
         }
