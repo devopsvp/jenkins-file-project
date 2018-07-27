@@ -6,4 +6,4 @@ COPY ./target/zettamine.war /usr/local/tomcat/webapps/
 
 VOLUME /usr/local/tomcat/webapps/
 
-EXPOSE 8088
+EXPOSE 8080
