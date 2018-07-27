@@ -50,9 +50,9 @@ pipeline {
             steps {
                 git 'https://github.com/vijaymargam/jenkins-file-project.git'
                 sh 'mvn clean package'
-                sh 'docker rm -f tomcat'
-                sh 'docker build -t tomcat .'
-                sh 'docker run --name tomcat -p 8080:8080 -dt tomcat'
+                sh 'sudo docker rm -f tomcat'
+                sh 'sudo docker build -t tomcat .'
+                sh 'sudo docker run --name tomcat -p 8080:8080 -dt tomcat'
                 echo 'Deploying'
             }
         }
