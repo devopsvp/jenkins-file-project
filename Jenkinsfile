@@ -52,7 +52,7 @@ pipeline {
                 sh 'mvn clean package'
               //  sh 'sudo docker rm -f tomcat'
                 sh 'sudo docker build -t tomcat .'
-                sh 'sudo docker run --name tomcat -p 8080:8080 -dt tomcat'
+                sh 'sudo docker run --name tomcat -p 8088:8080 -dt tomcat'
                 echo 'Deploying'
             }
         }
