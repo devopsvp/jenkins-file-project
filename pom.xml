@@ -69,7 +69,7 @@
    <configuration>
   	 <url>http://13.232.66.88:8088/manager/text</url>
   	 <server>TomcatServer</server>
-  	 <path>/WebApps</path>
+  	 <path>/zettamine</path>
    </configuration>
 </plugin>
       </plugins>
