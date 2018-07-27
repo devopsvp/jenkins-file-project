@@ -28,7 +28,7 @@ pipeline {
         stage('Sonarqube') {
             steps {
                 git 'https://github.com/vijaymargam/jenkins-file-project.git'
-                sh 'mvn clean test  sonar:sonar'
+                sh 'mvn sonar:sonar'
                 echo 'Testing'
             }
         }
