@@ -61,7 +61,29 @@
           <artifactId>maven-deploy-plugin</artifactId>
           <version>2.8.2</version>
         </plugin>
+        <!-- tomcat plugin-->
+        <plugin>
+   <groupId>org.apache.tomcat.maven</groupId>
+   <artifactId>tomcat7-maven-plugin</artifactId>
+   <version>2.2</version>
+   <configuration>
+  	 <url>http://13.232.98.85:8088/manager/text</url>
+  	 <server>TomcatServer</server>
+  	 <path>/WebApps</path>
+   </configuration>
+</plugin>
       </plugins>
     </pluginManagement>
   </build>
+  <!-- nexus plugin--> 
+  <distributionManagement>  
+    <repository>
+    <id>releaserepo</id>
+    <url>http://13.232.98.85:8081/nexus/content/repositories/releaserepo</url>
+    </repository>
+    <snapshotRepository>
+    <id>snapshotrepo</id>
+    <url>http://13.232.98.85:8081/nexus/content/repositories/snapshotrepo</url>
+  </snapshotRepository>
+</distributionManagement>
 </project>
