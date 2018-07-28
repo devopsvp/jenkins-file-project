@@ -6,7 +6,7 @@ pipeline {
             steps {
                 git 'https://github.com/vijaymargam/jenkins-file-project.git'
                  sh 'mvn validate'
-                 sh 'cp -pr settings.xml ~/.m2/
+                 sh 'cp -pr settings.xml ~/.m2/'
                 echo 'Building..'
             }
         }
