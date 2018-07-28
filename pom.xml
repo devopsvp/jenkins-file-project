@@ -67,7 +67,7 @@
    <artifactId>tomcat7-maven-plugin</artifactId>
    <version>2.2</version>
    <configuration>
-  	 <url>http://13.232.66.88:8082/manager/text</url>
+  	 <url>http://localhost:8082/manager/text</url>
   	 <server>TomcatServer</server>
   	 <path>/zettamine</path>
    </configuration>
@@ -79,11 +79,11 @@
   <distributionManagement>  
     <repository>
     <id>releaserepo</id>
-    <url>http://13.232.66.88:8081/nexus/content/repositories/releaserepo</url>
+    <url>http://localhost:8081/nexus/content/repositories/releaserepo</url>
     </repository>
     <snapshotRepository>
     <id>snapshotrepo</id>
-    <url>http://13.232.66.88:8081/nexus/content/repositories/snapshotrepo</url>
+    <url>http://localhost:8081/nexus/content/repositories/snapshotrepo</url>
   </snapshotRepository>
 </distributionManagement>
 </project>
