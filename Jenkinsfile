@@ -51,7 +51,7 @@ pipeline {
             steps {
                 git 'https://github.com/vijaymargam/jenkins-file-project.git'
                 sh 'mvn clean package'
-                sh 'mvn tomcat7:deploy'
+                sh 'mvn tomcat7:redeploy'
 
                 echo 'Deploying'
             }
